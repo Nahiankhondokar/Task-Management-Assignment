@@ -10,7 +10,7 @@
                 </li>
 
                 <li class="nav-item active">
-                    <a class="" href="{{route('dashboard')}}"><b>Task List</b></a>
+                    <a class="" href="{{route('task.index')}}"><b>Task List</b></a>
                 </li>
                 <li class="nav-item active">
                     <form method="POST" action="{{route('logout')}}">

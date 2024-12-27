@@ -49,3 +49,18 @@ padding: 5px;
     justify-content: center;
     align-items: center;
 }
+
+.task-view {
+    width: 50%;
+    margin: auto;
+    background: #f9f8f8;
+    padding: 10px;
+    border: 2px solid rgb(1, 63, 63);
+}
+
+.task-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}

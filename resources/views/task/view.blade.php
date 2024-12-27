@@ -4,10 +4,10 @@
 <div class="task_table">
     <div class="container">
         <div class="row">
-            <div class="col-md-12 text-center">
+            <div class="col-md-12 text-center ">
                 
-                <h3 class="text-center">View Task</h3>
-                <table class="table table-striped border">
+                
+                {{-- <table class="table table-striped border">
                     <thead>
                       <tr>
                         <th scope="col">#</th>
@@ -19,23 +19,53 @@
                       </tr>
                     </thead>
                     <tbody>
-                        {{-- <tr>
-                            <th scope="row">{{$key + 1}}</th>
-                            <td>{{$token->name}}</td>
-                            <td>{{$token->amount ?? "None"}}</td>
-                            <td>{{$token->straight_amount ?? "None"}}</td>
-                            <td>{{$token->rumble_amount ?? "None"}}</td>
-                            <td>
-                                <a href="{{route('task.edit',$token->id)}}" class="text-info">
-                                    <i class="fa-solid fa-pen-to-square"></i>
-                                </a>
-                                <a href="{{route('task.delete',$token->id)}}" class="text-danger">
-                                    <i class="fa-solid fa-trash"></i>
-                                </a>
-                            </td> --}}
+                        <tr>
+                        <th scope="row">{{$key + 1}}</th>
+                        <td>{{$task->task}}</td>
+                        <td>{{$token->amount ?? "None"}}</td>
+                        <td>{{$token->start_date ?? "None"}}</td>
+                        <td>{{$token->end_date ?? "None"}}</td>
+                        <td>
+                            <a href="{{route('task.edit',$token->id)}}" class="text-info">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </a>
+                            <a href="{{route('task.delete',$token->id)}}" class="text-danger">
+                                <i class="fa-solid fa-trash"></i>
+                            </a>
+                        </td>
                         </tr>
                     </tbody>
-                </table>
+                </table> --}}
+
+                <div class="task-view shadow rounded">
+                    <h3 class="text-center">View Task</h3>
+                    <hr>
+
+                    <div class="task-item">
+                        <span>Task Name :</span>
+                        <h5>{{$task->task}}</h5>
+                    </div>
+
+                    <div class="task-item">
+                        <span>Description :</span>
+                        <h5>{{$task->desc ?? "None"}}</h5>
+                    </div>
+
+                    <div class="task-item">
+                        <span>Status :</span>
+                        <h5><div class="badge badge-primary">{{$task->status}}</div></h5>
+                    </div>
+
+                    <div class="task-item">
+                        <span>Start Date :</span>
+                        <h5>{{$task->start_date}}</h5>
+                    </div>
+
+                    <div class="task-item">
+                        <span>End Date :</span>
+                        <h5>{{$task->end_date}}</h5>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

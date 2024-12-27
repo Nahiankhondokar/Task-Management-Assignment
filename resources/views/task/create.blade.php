@@ -8,7 +8,7 @@
                 <div class="from-area w-50 m-auto p-3 rounded shadow bg-white">
                     <h3 class="task-btn text-center">Create Task</h3>
                     <hr>
-                    <form action="{{route('task.create')}}" method="POST" class="">
+                    <form action="{{route('task.store')}}" method="POST" class="">
                         @csrf
                         
                         <div class="form-group">

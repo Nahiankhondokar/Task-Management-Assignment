@@ -35,7 +35,7 @@
                         </td>
                         <td>
                             <div class="actions">
-                                <a href="" class="text-primary">
+                                <a href="{{route('task.show', $task->id)}}" class="text-primary">
                                     <i class="fa-solid fa-eye"></i>
                                 </a>
                                 <a href="" class="text-info">

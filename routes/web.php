@@ -18,9 +18,10 @@ Route::middleware('auth')->group(function(){
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
     Route::prefix('task')->name('task.')->group(function(){
-        Route::get('/list', [TaskController::class, 'show'])->name('show');
-        Route::get('/create', [TaskController::class, 'index'])->name('index');
-        Route::post('/create', [TaskController::class, 'create'])->name('create');
+        Route::get('/list', [TaskController::class, 'index'])->name('index');
+        Route::get('/create', [TaskController::class, 'create'])->name('create');
+        Route::post('/store', [TaskController::class, 'store'])->name('store');
+        Route::get('/show/{task}', [TaskController::class, 'show'])->name('show');
     });
 });
 

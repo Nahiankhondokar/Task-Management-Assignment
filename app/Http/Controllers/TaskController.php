@@ -12,18 +12,18 @@ class TaskController extends Controller
 {
     public function index(): View
     {
-        return view('task.create');
-    }
-
-    public function show(): View
-    {
         $tasks = Task::orderByDesc('id')->get();
         return view('dashboard', 
             ['tasks' => $tasks]
         );
     }
 
-    public function create(TaskCreateRequest $request): RedirectResponse
+    public function create(): View
+    {
+        return view('task.create');
+    }
+
+    public function store(TaskCreateRequest $request): RedirectResponse
     {
         $task = Task::query()->create([
             'task'          => $request->task,
@@ -40,5 +40,12 @@ class TaskController extends Controller
         return redirect()
         ->back()
         ->with('error', 'Task failed');
+    }
+
+    public function show(Task $task): View
+    {
+        return view('task.view', 
+            ['task' => $task]
+        );
     }
 }
