@@ -74,6 +74,19 @@ class TaskController extends Controller
         return redirect()
         ->route('task.index')
         ->with('success', 'Task updated successfully');
-    
+    }
+
+    public function destroy(Task $task): RedirectResponse
+    {
+        if(!$task){
+            return redirect()
+            ->back()
+            ->with('error', 'Task not found!');
+        }
+        $task->delete();
+
+        return redirect()
+        ->back()
+        ->with('success', 'Task deleted successfully');
     }
 }

@@ -17,7 +17,7 @@
                         <th scope="col">Task</th>
                         <th scope="col">Description</th>
                         <th scope="col">Start Date</th>
-                        <th scope="col">Eend Date</th>
+                        <th scope="col">End Date</th>
                         <th scope="col">Status</th>
                         <th scope="col">Action</th>
                       </tr>
@@ -41,7 +41,7 @@
                                 <a href="{{route('task.edit', $task->id)}}" class="text-info">
                                     <i class="fa-solid fa-pen-to-square"></i>
                                 </a>
-                                <a href="" class="text-danger">
+                                <a href="{{route('task.delete', $task->id)}}" class="text-danger">
                                     <i class="fa-solid fa-trash"></i>
                                 </a>
                             </div>
@@ -49,7 +49,7 @@
                       </tr>
                       @empty 
                       <tr>
-                        <th scope="row">No Data</th>
+                        <th scope="row" colspan="7" class="text-danger">No Data</th>
                       </tr>
                       @endforelse
                     </tbody>
