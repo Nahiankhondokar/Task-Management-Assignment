@@ -19,6 +19,8 @@ Route::middleware('auth')->group(function(){
 
     Route::prefix('task')->name('task.')->group(function(){
         Route::get('/list', [TaskController::class, 'show'])->name('show');
+        Route::get('/create', [TaskController::class, 'index'])->name('index');
+        Route::post('/create', [TaskController::class, 'create'])->name('create');
     });
 });
 

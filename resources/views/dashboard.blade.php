@@ -8,7 +8,7 @@
                 
                 <h3 class="text-center">Task List</h3>
                 <div class="create-btn my-2 float-right">
-                    <a href="" class="task-btn">Create task</a>
+                    <a href="{{route('task.create')}}" class="task-btn">Create task</a>
                 </div>
                 <table class="table table-striped border">
                     <thead>
