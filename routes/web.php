@@ -3,5 +3,9 @@
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [AuthController::class, 'login'])->name('login');
-Route::get('/register', [AuthController::class, 'register'])->name('register');
+Route::middleware('guest')->group(function(){
+    Route::view('/', 'auth.login')->name('login');
+    Route::view('/register', 'auth.register')->name('register');
+});
+
+

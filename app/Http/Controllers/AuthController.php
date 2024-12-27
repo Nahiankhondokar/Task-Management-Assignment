@@ -7,13 +7,8 @@ use Illuminate\View\View;
 
 class AuthController extends Controller
 {
-    public function login (): View
+    public function index (): View
     {
         return view('auth.login');
-    }
-
-    public function register (): View
-    {
-        return view('auth.register');
     }
 }
