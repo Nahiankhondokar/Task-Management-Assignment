@@ -25,6 +25,10 @@ Route::middleware('auth')->group(function(){
         Route::get('/edit/{task}', [TaskController::class, 'edit'])->name('edit');
         Route::post('/update/{task}', [TaskController::class, 'update'])->name('update');
         Route::get('/delete/{task}', [TaskController::class, 'destroy'])->name('delete');
+
+        Route::get('/filter/{status}', [TaskController::class, 'filterByStatus'])->name('status');
     });
+
+    
 });
 

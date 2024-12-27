@@ -89,4 +89,15 @@ class TaskController extends Controller
         ->back()
         ->with('success', 'Task deleted successfully');
     }
+
+    public function filterByStatus(string $status): View
+    {
+        $tasks = Task::query()->where('status', $status)
+        ->orderByDesc('id')
+        ->get();
+
+        return view('dashboard', 
+            ['tasks' => $tasks]
+        );
+    }
 }
