@@ -41,3 +41,11 @@ text-decoration: none;
 margin: 0px 5px;
 padding: 5px;
 }
+
+.actions {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}

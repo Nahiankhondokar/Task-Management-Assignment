@@ -22,27 +22,32 @@
                       </tr>
                     </thead>
                     <tbody>
-                      {{-- @forelse($tokens as $key => $token)
+                      @forelse($tasks as $key => $task)
                       <tr>
                         <th scope="row">{{$key + 1}}</th>
-                        <td>{{$token->name}}</td>
-                        <td>{{$token->amount ?? "None"}}</td>
-                        <td>{{$token->straight_amount ?? "None"}}</td>
-                        <td>{{$token->rumble_amount ?? "None"}}</td>
+                        <td>{{$task->task}}</td>
+                        <td>{{$task->desc ?? "None"}}</td>
+                        <td>{{$task->start_date ?? "None"}}</td>
+                        <td>{{$task->end_date ?? "None"}}</td>
                         <td>
-                            <a href="{{route('task.edit',$token->id)}}" class="text-info">
-                                <i class="fa-solid fa-pen-to-square"></i>
-                            </a>
-                            <a href="{{route('task.delete',$token->id)}}" class="text-danger">
-                                <i class="fa-solid fa-trash"></i>
-                            </a>
+                            <div class="actions">
+                                <a href="" class="text-primary">
+                                    <i class="fa-solid fa-eye"></i>
+                                </a>
+                                <a href="" class="text-info">
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                </a>
+                                <a href="" class="text-danger">
+                                    <i class="fa-solid fa-trash"></i>
+                                </a>
+                            </div>
                         </td>
                       </tr>
                       @empty 
                       <tr>
                         <th scope="row">No Data</th>
                       </tr>
-                      @endforelse --}}
+                      @endforelse
                     </tbody>
                 </table>
             </div>
