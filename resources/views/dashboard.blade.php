@@ -8,9 +8,10 @@
                 
                 <h3 class="text-center">Task List</h3>
                 <div class="create-btn my-2 float-right rounded">
-                    <a href="{{route('task.status', "Pending")}}" class="btn btn-sm btn-info">Pending</a>
-                    <a href="{{route('task.status', "In Progress")}}" class="btn btn-sm btn-primary">In Progress</a>
-                    <a href="{{route('task.status', "Completed")}}" class="btn btn-sm btn-success">Completed</a>
+                    <span class="font-weight-bold">Filter & Sort Options : </span>
+                    <a href="{{route('task.status', "Pending")}}" class="btn btn-sm btn-info font-weight-bold">Pending</a>
+                    <a href="{{route('task.status', "In Progress")}}" class="btn btn-sm btn-primary font-weight-bold">In Progress</a>
+                    <a href="{{route('task.status', "Completed")}}" class="btn btn-sm btn-success font-weight-bold">Completed</a>
                     <a href="{{route('task.sort', "end_date")}}" class="sort-by-date rounded">Sort By End Date</a>
                     <a href="{{route('task.create')}}" class="task-btn">Create task</a>
                 </div>
