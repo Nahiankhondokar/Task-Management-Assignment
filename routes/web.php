@@ -27,6 +27,7 @@ Route::middleware('auth')->group(function(){
         Route::get('/delete/{task}', [TaskController::class, 'destroy'])->name('delete');
 
         Route::get('/filter/{status}', [TaskController::class, 'filterByStatus'])->name('status');
+        Route::get('/sort/{status}', [TaskController::class, 'sortByEndDate'])->name('sort');
     });
 
     

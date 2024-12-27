@@ -100,4 +100,15 @@ class TaskController extends Controller
             ['tasks' => $tasks]
         );
     }
+
+    public function sortByEndDate(string $dateStatus): View
+    {
+        $tasks = Task::query()
+        ->orderByDesc("$dateStatus")
+        ->get();
+
+        return view('dashboard', 
+            ['tasks' => $tasks]
+        );
+    }
 }
