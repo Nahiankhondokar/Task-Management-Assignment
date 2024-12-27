@@ -29,7 +29,5 @@ Route::middleware('auth')->group(function(){
         Route::get('/filter/{status}', [TaskController::class, 'filterByStatus'])->name('status');
         Route::get('/sort/{status}', [TaskController::class, 'sortByEndDate'])->name('sort');
     });
-
-    
 });
 
