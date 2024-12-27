@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="from-area w-50 m-auto p-3 rounded shadow bg-white">
-                    <h3 class="task-btn text-center">Create Task</h3>
+                    <h3 class=" text-center">Create Task</h3>
                     <hr>
                     <form action="{{route('task.store')}}" method="POST" class="">
                         @csrf

@@ -36,7 +36,11 @@
                         <td>{{$task->start_date ?? "None"}}</td>
                         <td>{{$task->end_date ?? "None"}}</td>
                         <td>
-                            <div class="badge badge-info">{{$task->status ?? "None"}}</div>
+                            <div @if ($task->status == 'Pending') class="badge badge-info" 
+                                @elseif($task->status == 'Completed') class="badge badge-success"
+                                @elseif($task->status == 'In Progress') class="badge badge-primary"
+                                @endif
+                            ">{{$task->status ?? "None"}}</div>
                         </td>
                         <td>
                             <div class="actions">
