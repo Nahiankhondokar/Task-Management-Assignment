@@ -18,6 +18,11 @@
                                 <span class="error text-danger">{{ $errors->first('task') }}</span>
                             @endif
                         </div>
+
+                        <div class="form-group">
+                            <label>Description</label>
+                            <input type="text" class="form-control required" name="desc" placeholder="Description">
+                        </div>
                       
                         <div class="form-group">
                             <label>Start Date</label>

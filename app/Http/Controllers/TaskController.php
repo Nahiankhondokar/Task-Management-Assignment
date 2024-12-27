@@ -27,6 +27,7 @@ class TaskController extends Controller
     {
         $task = Task::query()->create([
             'task'          => $request->task,
+            'desc'          => $request->desc,
             'start_date'    => $request->start_date,
             'end_date'      => $request->end_date,
         ]);

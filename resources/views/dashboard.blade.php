@@ -15,6 +15,7 @@
                       <tr>
                         <th scope="col">#</th>
                         <th scope="col">Task</th>
+                        <th scope="col">Description</th>
                         <th scope="col">Start Date</th>
                         <th scope="col">Eend Date</th>
                         <th scope="col">Status</th>
@@ -29,6 +30,9 @@
                         <td>{{$task->desc ?? "None"}}</td>
                         <td>{{$task->start_date ?? "None"}}</td>
                         <td>{{$task->end_date ?? "None"}}</td>
+                        <td>
+                            <div class="badge badge-info">{{$task->status ?? "None"}}</div>
+                        </td>
                         <td>
                             <div class="actions">
                                 <a href="" class="text-primary">
