@@ -38,7 +38,7 @@
                                 <a href="{{route('task.show', $task->id)}}" class="text-primary">
                                     <i class="fa-solid fa-eye"></i>
                                 </a>
-                                <a href="" class="text-info">
+                                <a href="{{route('task.edit', $task->id)}}" class="text-info">
                                     <i class="fa-solid fa-pen-to-square"></i>
                                 </a>
                                 <a href="" class="text-danger">

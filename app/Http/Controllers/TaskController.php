@@ -48,4 +48,32 @@ class TaskController extends Controller
             ['task' => $task]
         );
     }
+
+    public function edit(Task $task): View
+    {
+        return view('task.edit', 
+            ['task' => $task]
+        );
+    }
+
+    public function update(Request $request, Task $task): RedirectResponse
+    {
+        if(!$task){
+            return redirect()
+            ->back()
+            ->with('error', 'Task not found!');
+        }
+        
+        $task->task     = $request->task;
+        $task->desc     = $request->desc;
+        $task->status   = $request->status;
+        $task->start_date = $request->start_date;
+        $task->end_date = $request->end_date;
+        $task->save();
+        
+        return redirect()
+        ->route('task.index')
+        ->with('success', 'Task updated successfully');
+    
+    }
 }

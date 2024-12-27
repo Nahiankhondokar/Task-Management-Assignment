@@ -22,6 +22,8 @@ Route::middleware('auth')->group(function(){
         Route::get('/create', [TaskController::class, 'create'])->name('create');
         Route::post('/store', [TaskController::class, 'store'])->name('store');
         Route::get('/show/{task}', [TaskController::class, 'show'])->name('show');
+        Route::get('/edit/{task}', [TaskController::class, 'edit'])->name('edit');
+        Route::post('/update/{task}', [TaskController::class, 'update'])->name('update');
     });
 });
 
