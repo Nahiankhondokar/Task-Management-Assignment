@@ -7,7 +7,11 @@
             <div class="col-md-12 text-center">
                 
                 <h3 class="text-center">Task List</h3>
-                <div class="create-btn my-2 float-right">
+                <div class="create-btn my-2 float-right rounded">
+                    <a href="" class="btn btn-sm btn-info">Pending</a>
+                    <a href="" class="btn btn-sm btn-primary">In Progress</a>
+                    <a href="" class="btn btn-sm btn-success">Completed</a>
+                    <a href="" class="sort-by-date rounded">Sort By End Date</a>
                     <a href="{{route('task.create')}}" class="task-btn">Create task</a>
                 </div>
                 <table class="table table-striped border">
@@ -59,30 +63,4 @@
     </div>
 </div>
 
-<style>
-
-    .task_table {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-
-    }
-    .task-btn {
-        background: rgb(1, 63, 63);
-        padding: 5px 10px;
-        border-radius: 5px;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 20px;
-        color: white;
-        border: 2px solid #1b94c5;
-    }
-
-    a.task-btn:hover {
-        text-decoration: none;
-        background: rgba(1, 63, 63, 0.671);
-        color: white
-    }
-</style>
 @endsection
