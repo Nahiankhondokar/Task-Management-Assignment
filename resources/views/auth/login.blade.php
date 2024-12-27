@@ -19,7 +19,7 @@
                     <h2>Login</h2>
                     <p>Task Management System</p>
                 </div>
-                <form action="" method="POST" class="">
+                <form action="{{route('login.store')}}" method="POST" class="">
                     @csrf
                    
                    <div class="form-group">
