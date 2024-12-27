@@ -3,7 +3,10 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    border: 2px solid #1b94c5;
+}
+
+.from-area {
+    border: 2px solid rgb(1, 63, 63);
 }
 
 
