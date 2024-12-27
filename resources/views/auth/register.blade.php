@@ -14,11 +14,12 @@
     <main>
         <div class="wrapper-login">
             <div class="from-area w-50 m-auto p-3 rounded shadow bg-white">
+                @include('error.error_message')
                 <div class="login-title text-center text-black">
                     <h2>Registration</h2>
                     <p>Task Management System</p>
                 </div>
-                <form action="" method="POST" class="">
+                <form action="{{route('register.store')}}" method="POST">
                     @csrf
                    
                    <div class="form-group">

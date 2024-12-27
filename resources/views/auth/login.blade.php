@@ -14,6 +14,7 @@
     <main>
         <div class="wrapper-login">
             <div class="from-area w-50 m-auto p-3 rounded shadow bg-white">
+                @include('error.error_message')
                 <div class="login-title text-center text-black">
                     <h2>Login</h2>
                     <p>Task Management System</p>
